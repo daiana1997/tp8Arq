@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Trabajo de Criptografia</title>
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.js"></script>
+        <script type="text/javascript" src="scripts/funciones.js"></script>
+        <script type="text/javascript" src="scripts/ui.js"></script>
+        <script type="text/javascript" src="scripts/modal.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/modal.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.css">        
+    </head>
+    <body>
+         
+        <div class="sticky-top bg-white">
+            <h1 class="text-center">
+                <strong id="etiqueta">Cifrar</strong>
+            </h1>
+          <div class="d-flex justify-content-center mt-1 mb-5 ">
+              <div class="row">
+                  <div class="col">
+                      <ul class="nav nav-tabs small" role="tablist">
+                          <li id="elemento1" class="nav-item"><a class="nav-link text-uppercase active text-info" data-toggle="tab" href="#tab1" role="tab">Cifrado Cesar</a></li>
+                          <li id="elemento2" class="nav-item"><a  class="nav-link text-uppercase text-info" data-toggle="tab" href="#tab2" role="tab">Descifrado Cesar</a></li>
+                          <li id="elemento3" class="nav-item"><a  class="nav-link text-uppercase text-info" data-toggle="tab" href="#tab3" role="tab">Cifrado Vigenere</a></li>
+                          <li id="elemento4" class="nav-item"><a  class="nav-link text-uppercase text-info" data-toggle="tab" href="#tab4" role="tab">Descrifrado Vigenere</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+            <center>
+              <div class="d-block">
+                  <div class="col-6 my-3">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Ingresar un cadena" id="cadena">
+                        <span class="input-group-btn">
+                          <button class="btn btn-info" type="button" id="cargar" data-toggle="popover1" title="Error de entrada"  data-content="La cadena está vacía." data-placemente="right" data-trigger="focus">Cargar</button>
+                        </span>                                  
+                      </div>
+                  </div>  
+                  <div class="col-3 my-4">
+                                    
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Ingresar la clave/desplazamiento" id="desplazamiento">                                 
+                      </div>
+                      <p class="lead">Ingrese desplazamiento: <span id="desplazamiento"></span></p>   
+                  </div>
+
+                  <div class="col-3 my-4">
+                    <p class="lead">Resultado: <span id="resultado"></span></p>
+        
+                </div>
+              </div>
+            </center>
+      </div>
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalText" class="lead"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

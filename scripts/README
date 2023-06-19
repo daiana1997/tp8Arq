@@ -1,0 +1,15 @@
+La funcion cifradorVigenere toma como entrada un texto y una clave.
+Primero, se normalizan tanto el texto como la clave, convirtiendolos a mayusculas
+y eliminando cualquier caracter que no sea una letra.
+Luego, se recorre cada caracter del texto normalizado y se realiza el cifrado de Vigenère.
+
+Los caracteres se convierten a sus códigos numéricos (A=0, B=1, etc.)
+y se suma el código del carácter del texto con el código del carácter correspondiente de la clave.
+El resultado se ajusta módulo 26 para asegurarse de que esté en el rango de las
+letras del alfabeto (A-Z) y se convierte de nuevo a carácter.
+El texto cifrado se va acumulando en la variable resultado.
+
+Se proporciona una funcion descifradorVigenere que realiza el descifrado correspondiente
+utilizando el mismo enfoque.
+Se utiliza la misma clave para descifrar el texto cifrado.
+El texto descifrado se imprime en la consola.
